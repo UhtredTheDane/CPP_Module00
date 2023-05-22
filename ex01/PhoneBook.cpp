@@ -52,12 +52,12 @@ string PhoneBook::seek_phone_number()
 
 void PhoneBook::add_contact()
 {
-    if (this.nb_contact < 8)
-        ++this.nb_contact;
-    this.contacts[this.nb_contact - 1].set_first_name(this.seek_first_name());
-    this.contacts[this.nb_contact - 1].set_last_name(this.seek_last_name());
-    this.contacts[this.nb_contact - 1].set_darkest_secret(this.seek_darkest_secret());
-    this.contacts[this.nb_contact - 1].set_phone_number(this.seek_phone_number());
+    if (nb_contact < 8)
+        ++nb_contact;
+    contacts[nb_contact - 1].set_first_name(seek_first_name());
+    contacts[nb_contact - 1].set_last_name(seek_last_name());
+    contacts[nb_contact - 1].set_darkest_secret(seek_darkest_secret());
+    contacts[nb_contact - 1].set_phone_number(seek_phone_number());
 }
 
 

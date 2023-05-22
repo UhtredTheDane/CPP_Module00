@@ -10,7 +10,7 @@ class PhoneBook
         void search_contact() const;
 
     private:
-        Contact::Contact contacts[8];
+        Contact contacts[8];
         unsigned int    nb_contact(0);
         std::string PhoneBook::seek_first_name() const;
         std::string PhoneBook::seek_last_name() const;
