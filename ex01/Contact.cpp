@@ -1,4 +1,2 @@
-class Contact
-{
-	Contact	contacts[8];
-};
+#include "Contact.h"
+
