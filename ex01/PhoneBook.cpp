@@ -1,52 +1,57 @@
 #include "PhoneBook.hpp"
 
-string PhoneBook::seek_first_name()
+PhoneBook::PhoneBook() : nb_contact(0)
 {
-    string  first_name;
+
+}
+
+std::string PhoneBook::seek_first_name()
+{
+	std::string  first_name;
 
     do
     {
-        cout << "First Name: ";
-        getline(cin, first_name);
-        cout << endl;
+	    std::cout << "First Name: ";
+        getline(std::cin, first_name);
+	std::cout << std::endl;
     } while(first_name.length() <= 0);
     return (first_name);
 }
 
-string PhoneBook::seek_last_name()
+std::string PhoneBook::seek_last_name()
 {
-    string  last_name;
+	std::string  last_name;
 
     do
     {
-        cout << endl << "Last Name: ";
-        getline(cin, last_name);
-        cout << endl;
+	    std::cout << "Last Name: ";
+        getline(std::cin, last_name);
+	std::cout << std::endl;
     } while(last_name.length() <= 0);
     return (last_name);
 }
 
-string PhoneBook::seek_darkest_secret()
+std::string PhoneBook::seek_darkest_secret()
 {
-    string  darkest_secret;
+	std::string  darkest_secret;
 
     do
     {
-        cout << endl << "Darkest Secret: ";
-        getline(cin, darkest_secret);
-        cout << endl;
+	    std::cout << "Darkest Secret: ";
+        getline(std::cin, darkest_secret);
+	std::cout << std::endl;
     } while(darkest_secret.length() <= 0);
     return (darkest_secret);
 }
 
-string PhoneBook::seek_phone_number()
+unsigned int PhoneBook::seek_phone_number()
 {
-    int     phone_number;
+    unsigned int     phone_number;
 
-    cout << endl << "Phone Number: ";
-    cin >> phone_number;
-    cin.ignore();
-    cout << endl;
+    std::cout << "Phone Number: ";
+    std::cin >> phone_number;
+    std::cin.ignore();
+    std::cout << std::endl;
     return (phone_number);
 }
 
@@ -61,7 +66,7 @@ void PhoneBook::add_contact()
 }
 
 
-void search_contact() const
+void search_contact()
 {
 
 }

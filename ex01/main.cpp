@@ -6,12 +6,15 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 16:04:16 by agengemb          #+#    #+#             */
-/*   Updated: 2023/05/18 16:04:17 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/05/23 01:15:43 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 int main(void)
 {
+	PhoneBook ph;
+
+	ph.add_contact();
 	return (0);
 }
