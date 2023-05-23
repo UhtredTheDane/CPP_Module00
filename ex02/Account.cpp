@@ -14,19 +14,30 @@
 #include <iostream>
 #include <string>
 
+//Init static members
 int Account::_nbAccounts = 0;
 int Account::_totalAmount = 0;
 int Account::_totalNbDeposits = 0;
 int Account::_totalNbWithdrawals = 0;
 
-Account::Account( int initial_deposit )
+Account::Account(int initial_deposit)
 {
-		
+	t::_accountIndex = t::getNbAccounts();
+	++t::_nbAccounts;
+	t::_totalAmount += initial_deposit;
+	std::cout << "index:" << t::_accountIndex << ";amount:" << initial_deposit;
+	std::cout << ";created" << std::endl;
 }
 
 Account::~Account(void)
 {
-	
+	--t::_nbAccounts;
+	t::_totalAmount -= t::_amount;
+	t::_totalNbDeposits -= t::_nbDeposits;
+	t::_totalNbWithdrawals -= t::_nbWithdrawals;
+	std::cout << "index:" << t::_accountIndex << ";amount:" << t::_amount;
+	std::cout << ";closed" << std::endl;
+	index:0;amount:47;closed
 }
 
 int	Account::getNbAccounts(void)
@@ -80,7 +91,7 @@ bool	Account::makeWithdrawal(int withdrawal)
 		std::cout << withdrawal << ";";
 		Account::_amount -= withdrawal;
 		std::cout << "amount:" << Account::_amount << ";";
-		++Account::_nbWithdrawals;	
+		++Account::_nbWithdrawals;
 		std::cout << "nb_withdrawals:" << Account::getNbWithdrawals() << std::endl;
 		res = true;
 	}
@@ -92,18 +103,19 @@ bool	Account::makeWithdrawal(int withdrawal)
 	return (res);
 }
 
-/*
-int		checkAmount( void ) const
+int		t::checkAmount(void)
 {
-	return (2);
-}*/
-
-void	Account::displayStatus( void ) const
-{
-
+	return (t::_amount);
 }
 
-void	_displayTimestamp( void )
+void	Account::displayStatus(void)
+{
+	std::cout << "index:" << t::_accountIndex << ";amount:" << t::_amount;
+	std::cout << ";deposits:" << t::_nbDeposits << ";withdrawals:";
+	std::cout << t::_nbWithdrawals << std::endl;
+}
+
+void	Account::_displayTimestamp(void)
 {
 
 }
