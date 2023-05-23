@@ -6,15 +6,27 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 16:04:16 by agengemb          #+#    #+#             */
-/*   Updated: 2023/05/23 01:15:43 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/05/23 12:40:32 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+
 int main(void)
 {
+	std::string user_answer;
 	PhoneBook ph;
-
-	ph.add_contact();
+	
+	do
+	{
+		std::cout << "$>";
+		getline(std::cin, user_answer);
+		if (user_answer == "ADD")
+			ph.add_contact();
+		else if(user_answer == "SEARCH")
+			ph.search_contact();
+		else if (user_answer != "EXIT")
+			std::cout << "Bad command." << std::endl;
+	} while (user_answer != "EXIT");
 	return (0);
 }

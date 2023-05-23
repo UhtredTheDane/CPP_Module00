@@ -5,9 +5,14 @@ Contact::Contact()
 
 }
 
-void Contact::show_contact()
+void Contact::show_infos(int index)
 {
-    
+	std::cout << "Index: " << index << std::endl;
+	std::cout << "First name: " << first_name << std::endl;
+	std::cout << "Last name: " << last_name << std::endl;
+	std::cout << "Nickname: " << nickname << std::endl;
+	std::cout << "Phone number: " << phone_number << std::endl;
+	std::cout << "Darkest secret: " << darkest_secret << std::endl;	
 }
 
 std::string Contact::get_first_name()
@@ -28,6 +33,16 @@ std::string Contact::get_last_name()
 void Contact::set_last_name(std::string last_name)
 {
     this->last_name = last_name;
+}
+
+std::string Contact::get_nickname()
+{
+	return (this->nickname);
+}
+
+void Contact::set_nickname(std::string nickname)
+{
+	this->nickname = nickname;
 }
 
 std::string Contact::get_darkest_secret()
