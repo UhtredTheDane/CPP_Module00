@@ -21,6 +21,8 @@ int main(void)
 	{
 		std::cout << "$>";
 		getline(std::cin, user_answer);
+		if (!std::cin)
+			std::exit(1);
 		if (user_answer == "ADD")
 			ph.add_contact();
 		else if(user_answer == "SEARCH")

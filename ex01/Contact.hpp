@@ -31,8 +31,8 @@ class Contact
 	void set_nickname(std::string nickname);
         std::string get_darkest_secret();
         void set_darkest_secret(std::string darkest_secret);
-        unsigned int get_phone_number();
-        void set_phone_number(unsigned int phone_number);
+        std::string get_phone_number();
+        void set_phone_number(std::string phone_number);
 
     private:
         
@@ -40,7 +40,7 @@ class Contact
         std::string  last_name;
 	std::string  nickname;
         std::string  darkest_secret;
-        unsigned int    phone_number;
+        std::string     phone_number;
         
 };
 #endif

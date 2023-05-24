@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/24 11:46:13 by agengemb          #+#    #+#             */
+/*   Updated: 2023/05/24 12:16:39 by agengemb         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Contact.hpp"
 
 Contact::Contact()
@@ -55,12 +67,12 @@ void Contact::set_darkest_secret(std::string darkest_secret)
     this->darkest_secret = darkest_secret;
 }
 
-unsigned int Contact::get_phone_number()
+std::string Contact::get_phone_number()
 {
 	return (this->phone_number);
 }
 
-void Contact::set_phone_number(unsigned int phone_number)
+void Contact::set_phone_number(std::string phone_number)
 {
     this->phone_number = phone_number;
     

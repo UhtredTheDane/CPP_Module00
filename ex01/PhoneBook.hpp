@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 11:26:08 by agengemb          #+#    #+#             */
-/*   Updated: 2023/05/23 11:48:16 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/05/24 12:16:36 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,12 @@ class PhoneBook
 
         Contact contacts[8];
         unsigned int    nb_contact;
-	std::string seek_first_name();
-	std::string seek_last_name();
-	std::string seek_darkest_secret();
-	std::string seek_nickname();
-	unsigned int seek_phone_number();
+	    std::string seek_first_name();
+	    std::string seek_last_name();
+	    std::string seek_darkest_secret();
+	    std::string seek_nickname();
+	    std::string seek_phone_number();
+        void	show_format_contacts();
 };
 
 #endif
