@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 15:46:09 by agengemb          #+#    #+#             */
-/*   Updated: 2023/05/18 15:46:12 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/05/25 11:15:41 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(int argc, char *argv[])
 		for (int i = 1; i < argc; ++i)
 		{
 			tempo_s = argv[i];
-			for (int j = 0; j < tempo_s.length(); ++j)
+			for (int j = 0; (std::size_t) j < tempo_s.length(); ++j)
 				std::cout << ft_toupper(tempo_s.at(j));
 		}
 		std::cout << std::endl;
