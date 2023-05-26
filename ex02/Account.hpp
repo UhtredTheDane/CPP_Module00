@@ -7,7 +7,6 @@
 //                                                                            //
 // ************************************************************************** //
 
-
 #pragma once
 #ifndef __ACCOUNT_H__
 #define __ACCOUNT_H__
@@ -17,7 +16,6 @@
 // ************************************************************************** //
 
 class Account {
-
 
 	public:
 
@@ -46,14 +44,15 @@ class Account {
 		static int	_totalNbWithdrawals;
 		
 		Account(void);
+
 		static void	_displayTimestamp(void);
+		void	Account::checkWithdrawal(int withdrawal)
+
 		int		_accountIndex;
 		int		_amount;
 		int		_nbDeposits;
 		int		_nbWithdrawals;
 };
-
-
 
 // ************************************************************************** //
 // vim: set ts=4 sw=4 tw=80 noexpandtab:                                      //
@@ -61,6 +60,5 @@ class Account {
 // -*- mode: c++-mode;                                                       -*-
 // -*- fill-column: 75; comment-column: 75;                                  -*-
 // ************************************************************************** //
-
 
 #endif /* __ACCOUNT_H__ */

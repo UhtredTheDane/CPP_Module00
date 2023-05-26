@@ -93,19 +93,8 @@ void	Account::makeDeposit(int deposit)
 	std::cout << std::endl;
 }
 
-void	checkWithdrawal(int withdrawal)
+void	Account::checkWithdrawal(int withdrawal)
 {
-
-}
-
-bool	Account::makeWithdrawal(int withdrawal)
-{
-	bool	res;
-	
-	_displayTimestamp();
-	std::cout << "index:" << t::_accountIndex << ";";
-	std::cout << "p_amount:" << t::_amount << ";";
-	std::cout << "withdrawal:";
 	if (t::_amount >= withdrawal)
 	{
 		std::cout << withdrawal << ";";
@@ -122,6 +111,17 @@ bool	Account::makeWithdrawal(int withdrawal)
 		std::cout << "refused" << std::endl;
 		res = false;
 	}
+}
+
+bool	Account::makeWithdrawal(int withdrawal)
+{
+	bool	res;
+	
+	_displayTimestamp();
+	std::cout << "index:" << t::_accountIndex << ";";
+	std::cout << "p_amount:" << t::_amount << ";";
+	std::cout << "withdrawal:";
+	checkWithdrawal(withdrawal);
 	return (res);
 }
 
