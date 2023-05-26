@@ -6,52 +6,49 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 11:40:53 by agengemb          #+#    #+#             */
-/*   Updated: 2023/05/24 12:15:02 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/05/26 14:59:25 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-#include <stdlib.h>
-#include <stdio.h>
-#include <iostream>
 
 PhoneBook::PhoneBook() : nb_contact(0)
 {
 
 }
 
-std::string PhoneBook::seek_first_name()
+std::string seek_first_name()
 {
 	std::string  first_name;
 
-    do
-    {
-	    std::cout << "First Name: ";
-        getline(std::cin, first_name);
+	do
+	{
+		std::cout << "First Name: ";
+		getline(std::cin, first_name);
 		if (!std::cin)
 			std::exit(1);
-    } while(first_name.length() <= 0);
-    return (first_name);
+	} while(first_name.length() <= 0);
+	return (first_name);
 }
 
-std::string PhoneBook::seek_last_name()
+std::string seek_last_name()
 {
 	std::string  last_name;
 
-    do
-    {
-	    std::cout << "Last Name: ";
-        getline(std::cin, last_name);
+	do
+	{
+		std::cout << "Last Name: ";
+		getline(std::cin, last_name);
 		if (!std::cin)
 			std::exit(1);
-    } while(last_name.length() <= 0);
-    return (last_name);
+	} while(last_name.length() <= 0);
+	return (last_name);
 }
 
-std::string PhoneBook::seek_nickname()
+std::string seek_nickname()
 {	
 	std::string  nickname;
-	
+
 	do
 	{
 		std::cout << "Nickname: ";
@@ -62,32 +59,32 @@ std::string PhoneBook::seek_nickname()
 	return (nickname);
 }
 
-std::string PhoneBook::seek_darkest_secret()
+std::string seek_darkest_secret()
 {
 	std::string  darkest_secret;
-	
-    do
-    {
-	    std::cout << "Darkest Secret: ";
-        getline(std::cin, darkest_secret);
+
+	do
+	{
+		std::cout << "Darkest Secret: ";
+		getline(std::cin, darkest_secret);
 		if (!std::cin)
 			std::exit(1);
-    } while(darkest_secret.length() <= 0);
-    return (darkest_secret);
+	} while(darkest_secret.length() <= 0);
+	return (darkest_secret);
 }
 
-std::string PhoneBook::seek_phone_number()
+std::string seek_phone_number()
 {
-    std::string     phone_number;
+	std::string     phone_number;
 
-    do
+	do
 	{
 		std::cout << "Phone Number: ";
-    	getline(std::cin, phone_number);
+		getline(std::cin, phone_number);
 		if (!std::cin)
 			std::exit(1);
 	} while (phone_number.length() <= 0);
-    return (phone_number);
+	return (phone_number);
 }
 
 void PhoneBook::add_contact()
@@ -110,7 +107,7 @@ void show_format_string(std::string string_to_format)
 	{
 		for (int j = 0; j < 9; ++j)
 			std::cout << string_to_format[j];
-			std::cout << ".";
+		std::cout << ".";
 	}
 	else
 	{
@@ -121,9 +118,9 @@ void show_format_string(std::string string_to_format)
 	std::cout << "|";
 }
 
-void	PhoneBook::show_format_contacts()
+void	PhoneBook::show_format_contacts(void)
 {
-	for (int i = 0; i < nb_contact; ++i)
+	for (unsigned int i = 0; i < nb_contact; ++i)
 	{
 		std::cout << "\t " << i << "|";
 		show_format_string(contacts[i].get_first_name());
@@ -138,14 +135,13 @@ void	PhoneBook::show_format_contacts()
 void PhoneBook::search_contact()
 {
 	unsigned int index;
-	
+
 	show_format_contacts();
-	//A revoir pour utiliser getline plutot
 	std::cout << "Enter index: ";
 	std::cin >> index;
 	std::cin.ignore();
 	if (!std::cin)
-			std::exit(1);
+		std::exit(1);
 	if (index < 8)
 	{
 		if (index < nb_contact)

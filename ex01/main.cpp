@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 16:04:16 by agengemb          #+#    #+#             */
-/*   Updated: 2023/05/23 12:40:32 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/05/26 15:03:00 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 int main(void)
 {
-	std::string user_answer;
-	PhoneBook ph;
-	
+	std::string	user_answer;
+	PhoneBook	ph;
+
 	do
 	{
 		std::cout << "$>";
 		getline(std::cin, user_answer);
 		if (!std::cin)
-			std::exit(1);
+			return (1);
 		if (user_answer == "ADD")
 			ph.add_contact();
 		else if(user_answer == "SEARCH")
