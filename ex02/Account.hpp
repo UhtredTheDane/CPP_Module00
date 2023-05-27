@@ -46,7 +46,7 @@ class Account {
 		Account(void);
 
 		static void	_displayTimestamp(void);
-		void	Account::checkWithdrawal(int withdrawal)
+		bool	Account::checkWithdrawal(int withdrawal)
 
 		int		_accountIndex;
 		int		_amount;
