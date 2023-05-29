@@ -6,7 +6,7 @@
 /*   By: agengemb <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 12:52:16 by agengemb          #+#    #+#             */
-/*   Updated: 2023/05/26 15:53:57 by agengemb         ###   ########.fr       */
+/*   Updated: 2023/05/29 15:06:48 by agengemb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,8 +115,6 @@ bool	Account::checkWithdrawal(int withdrawal)
 
 bool	Account::makeWithdrawal(int withdrawal)
 {
-	bool	res;
-	
 	_displayTimestamp();
 	std::cout << "index:" << t::_accountIndex << ";";
 	std::cout << "p_amount:" << t::_amount << ";";
